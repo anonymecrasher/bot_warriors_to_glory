@@ -1,7 +1,6 @@
 import pynput
 import time
 
-
 mouse = pynput.mouse.Controller()
 agi_location = (722, 362)
 defence_location = (722, 511)
@@ -12,11 +11,13 @@ stam_location = (584, 642)
 
 build_agi = (76, 24, 7, 0, 7, 55)
 
+
 def left_clik(n=1):
     for i in range(n):
         mouse.press(pynput.mouse.Button.left)
         mouse.release(pynput.mouse.Button.left)
         time.sleep(0.1)
+
 
 def right_clik(n=1):
     for i in range(n):
@@ -24,12 +25,13 @@ def right_clik(n=1):
         mouse.release(pynput.mouse.Button.right)
         time.sleep(0.1)
 
-def lunch_fight():
 
+def lunch_fight():
     mouse.position = (218, 250)
     left_clik()
     mouse.position = (920, 805)
     left_clik()
+
 
 def get_position():
     time.sleep(2)
@@ -39,7 +41,6 @@ def get_position():
 
 
 def set_attribut_and_stuff_agi():
-
     mouse.position = (196, 325)
     left_clik()
     time.sleep(0.2)
@@ -48,7 +49,7 @@ def set_attribut_and_stuff_agi():
     time.sleep(1.5)
     left_clik()
 
-#set attribut
+    # set attribut
 
     mouse.position = agi_location
     left_clik(build_agi[0])
@@ -63,7 +64,7 @@ def set_attribut_and_stuff_agi():
     mouse.position = stam_location
     left_clik(build_agi[5])
 
-#set skill
+    # set skill
 
     time.sleep(0.1)
     mouse.position = (1219, 113)
@@ -80,17 +81,15 @@ def set_attribut_and_stuff_agi():
     mouse.position = (960, 638)
     left_clik()
 
-#buy items
+    # buy items
 
     mouse.position = (982, 785)
     left_clik()
     time.sleep(0.5)
 
-
     mouse.position = (208, 373)
     left_clik()
     time.sleep(2.5)
-
 
     mouse.position = (983, 317)
     left_clik()
@@ -109,7 +108,7 @@ def set_attribut_and_stuff_agi():
     mouse.position = (1446, 789)
     left_clik()
 
-#equip items
+    # equip items
 
     mouse.position = (463, 913)
     left_clik()
@@ -151,8 +150,5 @@ def set_attribut_and_stuff_agi():
     left_clik()
 
 
-
 time.sleep(3)
 set_attribut_and_stuff_agi()
-
-    
