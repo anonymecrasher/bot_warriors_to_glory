@@ -32,14 +32,6 @@ def lunch_fight():
     mouse.position = (920, 805)
     left_clik()
 
-
-def get_position():
-    time.sleep(2)
-    for i in range(200):
-        print(mouse.position)
-        time.sleep(0.1)
-
-
 def set_attribut_and_stuff_agi():
     mouse.position = (196, 325)
     left_clik()
